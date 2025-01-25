@@ -1,0 +1,361 @@
+/* Reset and base fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+}
+
+/* Layout wrapper */
+body {
+  display: flex;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 250px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  min-height: 100vh;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.logo i {
+  margin-right: 0.5rem;
+  color: #6366f1;  /* Purple accent */
+}
+.sidebar .nav-links {
+  list-style: none;
+  margin-top: 2rem;
+}
+.sidebar .nav-links li {
+  padding: 0.8rem 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #555;
+  transition: background 0.3s;
+}
+.sidebar .nav-links li i {
+  margin-right: 1rem;
+  width: 20px;
+}
+.sidebar .nav-links li.active,
+.sidebar .nav-links li:hover {
+  color: #6366f1;
+}
+.badge {
+  background: #f87171;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+  margin-left: auto;
+}
+.promo-box {
+  background: #eef2ff;
+  margin-top: auto;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+}
+.promo-box h4 {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.promo-box button {
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 1rem 2rem;
+  min-height: 100vh;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.topbar h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.user-highlight {
+  color: #6366f1;
+}
+.topbar p {
+  color: #888;
+  margin-left: 1rem;
+}
+.search-bar {
+  margin-left: auto;
+  margin-right: 2rem;
+  position: relative;
+  display: inline-block;
+}
+.search-bar input {
+  padding: 0.5rem 2rem 0.5rem 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+.search-bar i {
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+.topbar-profile {
+  display: flex;
+  align-items: center;
+}
+.topbar-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.topbar-profile .user-name {
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+.topbar-profile .user-role {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-right: 1rem;
+}
+.topbar-profile i {
+  font-size: 1.2rem;
+  color: #6366f1;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+/* Dashboard Cards (top row) */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.task-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.02);
+}
+.task-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.subtext {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+.progress-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+}
+.progress-bar {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+.progress-fill {
+  height: 100%;
+  background: #6366f1;
+  border-radius: 4px;
+}
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.due-date {
+  font-size: 0.8rem;
+  background: #fee2e2;
+  color: #ef4444;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+}
+.stats {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+.stats i {
+  margin-right: 0.2rem;
+}
+.avatar-group img {
+  border-radius: 50%;
+  margin-left: -8px;
+  border: 2px solid #fff;
+}
+
+/* Projects Section */
+.projects-section {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  gap: 1.5rem;
+}
+/* Two columns for projects, one for side activity */
+.projects-list h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+.projects-list .project-card {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.02);
+}
+.projects-list .project-card h4 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+.projects-list .project-card p {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+.tag-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.tag {
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  background: #eef2ff;
+  color: #6366f1;
+}
+.avatar-group {
+  display: flex;
+}
+.avatar-group img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-left: -8px;
+  border: 2px solid #fff;
+}
+
+/* Activity Section */
+.activity-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.task-activity {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.02);
+}
+.task-activity h3 {
+  margin-bottom: 1rem;
+}
+.donut-chart {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 1rem auto;
+  border-radius: 50%;
+  background: conic-gradient(#6366f1 0% 58%, #fbbf24 58% 90%, #93c5fd 90% 100%);
+}
+.chart-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.chart-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #444;
+}
+.chart-legend {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+.legend-color {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 0.3rem;
+  border-radius: 2px;
+}
+.progress-color { background: #6366f1; }
+.todo-color { background: #fbbf24; }
+.completed-color { background: #93c5fd; }
+
+.member-comments {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.02);
+}
+.member-comments h3 {
+  margin-bottom: 1rem;
+}
+.member-comments ul {
+  list-style: none;
+}
+.member-comments li {
+  margin-bottom: 1rem;
+}
+.member-comments li strong {
+  display: inline-block;
+  margin-right: 1rem;
+  color: #333;
+}
+.comment-date {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-left: 0.2rem;
+}
+.member-comments p {
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
